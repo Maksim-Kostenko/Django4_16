@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>
-        {{ flatpage.title }}
-    </title>
-</head>
-<body>
-<h1>Здесь мог быть заголовок, но его тут нет (но не точно)</h1>
-<hr>
-<p>{{ flatpage.content }}</p>
-<p>{{ flatpage.content }}</p>
-</body>
-</html>
+{% extends 'flatpages/default.html'%}
+{% block title %} 
+    {{ flatpage.title }} 
+{% endblock title %}
+{% block content %} 
+    {{ flatpage.content }}
+    <hr>
+    {{ flatpage.content }} 
+{% endblock content %}
